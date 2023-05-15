@@ -1,3 +1,5 @@
+![rm](https://github.com/betanddontcare/RouteMighty/assets/31188390/5bb86f8b-00c2-496d-b1ba-381481eacdc5)
+
 # RouteMighty 1.2.0
 RouteMighty is a software application engine developed in Python for the efficient planning of routes for abnormal vehicles, such as those that are overweight or oversized.
 
