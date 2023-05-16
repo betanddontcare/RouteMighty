@@ -10,7 +10,10 @@ This software based on a novel method developed in my PhD disseration titled: [C
 # Requirements & Installation
 Step 1: Install all the requirements before proceeding to next steps:
 
-Example: Python >= 3.11.3
+* Flask==2.3.2
+* Flask-Cors==3.0.10
+* neo4j==5.8.0
+* requests==2.28.2
 
 You should install all the python3 modules using the pip3 install *package_name* command.
 
