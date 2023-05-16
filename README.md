@@ -175,19 +175,30 @@ In this version the roundabout is described as a perfect circle.
 <details>
 
 <summary>RestPoint</summary>
+
+For more information please read my paper [Parking Lots Assignment Algorithm for Vehicles Requiring Specific Parking Conditions in Vehicle Routing Problem](https://ieeexplore.ieee.org/document/9628073)
   
-```
-{
-  "slotLength": 20000,
-  "restpointType": "PRIVATE",
-  "occupancy": 0.36,
-  "hazardousSlots": 0,
-  "lighting": true,
-  "cctv": false,
-  "security": false,
-  "barriers": true,
-  "milestone": 413.8,
-  "slotWidth": 4000,
+```slotLength:``` Length (in millimeters) of single slot for truck (eg. 20000).
+  
+```slotWidth:``` Width (in millimeters) of single slot for truck (eg. 4000).
+  
+```restpointType:``` Type of respoint (eg. "PRIVATE").
+  
+```occupancy:``` The average occupancy (in percent) of the parking (eg. 0.36). The data structure enables connection to the system that checks the load on parkings.
+  
+```hazardousSlots:``` Number of slots dedicated to truck with hazardous cargo (eg. 0 - if there is no slots).
+  
+```lighting:``` Boolean. Is there lighting in the parking : True/False.
+  
+```cctv:``` Boolean. Is there a monitoring system in the parking : True/False.
+  
+```security:``` Boolean. Is there a security guard in the parking : True/False.
+  
+```barriers:``` Boolean. Is there a security guard in the parking : True/False.
+  
+```milestone:``` Chainage where the parking occurs (eg. 413.8).
+  
+  
   "oversizeWidth": 0,
   "roadNumber": "S7",
   "generalSlots": 20,
