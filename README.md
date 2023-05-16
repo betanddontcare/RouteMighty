@@ -134,10 +134,17 @@ Every route contains:
  
  ```restpoints:``` List of valid respoints proposed by algorithm for stops or ```'Shorter'``` string if a stop is not needed.
  
- ```impassableObjects:``` List of impassable infrastructure object if the sum of removal cost is lower than declared by the operator (eg. ```[{'identity': 1122, 'name': 'Oznakowanie pionowe', 'milestone': 209.8, 'number': ['50'], 'latitude': 52.150281, 'longitude': 21.504701}]```.
+ ```impassableObjects:``` List of impassable infrastructure object if the sum of removal cost is lower than a cost declared by the operator (eg. ```[{'identity': 1122, 'name': 'Oznakowanie pionowe', 'milestone': 209.8, 'number': ['50'], 'latitude': 52.150281, 'longitude': 21.504701}]```.
  
- ```passableRoundabouts': [], 'cost': 200, 'weather': [], 'weatherIndex': 0.2626, 'safetyIndex': 0.2668}
-
+ ```impassableRoundabouts:``` List of impassable roundabouts if the sum of rebuilding is lower than a cost declared by the operator.
+ 
+ ```cost:``` Total cost [in dollars] of dismantling/rebuilding infrastructure of the road (eg. 200).
+ 
+ ```weather:``` List of roads where the weather is assessed as bad.
+ 
+ ```weatherIndex:``` A weighted average taking into account the length of sections of individual roads and the amount of precipitation on them (eg. 0.2626).
+ 
+ ```safetyIndex:```  A parameter taking into account both congestion and the amount of precipitation on the route (eg. 0.2868).
 
 # Neo4j Graph Database structure
 ![neo4j_struct](https://github.com/betanddontcare/RouteMighty/assets/31188390/a5318089-d160-468b-9028-088fdedcd3fd)
