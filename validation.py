@@ -154,7 +154,7 @@ def get_impassable_nodes(vehicle_params, roundabouts):
         ra_vertical_island = ra['verticalIsland']
         ra_outer_limit = ra['outerLimit']
         ra_open = ra['open']
-        if not is_valid_by_roundabout_size(vehicle_params.length, vehicle_params.width, vehicle_params.first_axle, vehicle_params.last_axle, vehicle_params.width_tire, vehicle_params.angle, vehicle_params.spacing, vehicle_params.bolt, ra_outer_diameter, ra_inner_diameter, ra_open, ra_vertical_island, ra_outer_limit):
+        if not is_valid_by_roundabout_size(vehicle_params.length, vehicle_params.width, vehicle_params.first_axle, vehicle_params.last_axle, vehicle_params.width_tire, vehicle_params.angle, vehicle_params.spacing, vehicle_params.bolt, ra_outer_radius, ra_inner_radius, ra_open, ra_vertical_island, ra_outer_limit):
             impassable_nodes.append(ra)
     return impassable_nodes
 
@@ -174,7 +174,7 @@ def is_valid_by_roundabout_size(v_length, v_width, v_first_axle, v_last_axle, v_
                 return ((ra_island < math.sqrt(pow((ra_outer_radius - v_tire_width - (v_spacing / 2)), 2) - pow(((v_last_axle - v_bolt) / 2), 2)) - (v_width / 2)) and (v_angle >= 90 - math.degrees(math.acos(((v_last_axle - v_bolt) / 2) / (ra_outer_radius - v_tire_width - (v_spacing / 2))))))
             else:
                 if (ra_outer_limit > v_length - v_last_axle + (v_last_axle - v_bolt) / 2):
-                    return ((v_width + ra_island < math.sqrt(pow(ra_outer_limit, 2) - pow(v_length - v_last_axle + ((v_last_axle - v_bolt) / 2), 2)) - (v_width / 2)) and (v_angle >= math.degrees(math.atan(((v_last_axle - v_bolt) / 2) / (math.sqrt(pow(ra_outer_limit, 2) - pow(v_length - v_last_axle + ((v_last_axle - v_bolt) / 2), 2)) - (v_width / 2))))) and (ra_inner_diameter + v_tire_width + (v_spacing / 2) < math.sqrt(pow(math.sqrt(pow(ra_outer_limit, 2) - pow(v_length - v_last_axle + ((v_last_axle - v_bolt) / 2), 2)) - (v_width / 2), 2) + pow((v_first_axle - v_bolt -((v_last_axle - v_bolt) / 2)), 2))))
+                    return ((v_width + ra_island < math.sqrt(pow(ra_outer_limit, 2) - pow(v_length - v_last_axle + ((v_last_axle - v_bolt) / 2), 2)) - (v_width / 2)) and (v_angle >= math.degrees(math.atan(((v_last_axle - v_bolt) / 2) / (math.sqrt(pow(ra_outer_limit, 2) - pow(v_length - v_last_axle + ((v_last_axle - v_bolt) / 2), 2)) - (v_width / 2))))) and (ra_inner_radius + v_tire_width + (v_spacing / 2) < math.sqrt(pow(math.sqrt(pow(ra_outer_limit, 2) - pow(v_length - v_last_axle + ((v_last_axle - v_bolt) / 2), 2)) - (v_width / 2), 2) + pow((v_first_axle - v_bolt -((v_last_axle - v_bolt) / 2)), 2))))
                 else:
                     return False
         else:
