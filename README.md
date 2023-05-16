@@ -121,24 +121,28 @@ These two above example variables means that the object has width limitation: 1.
 <summary>WeightObstruction</summary>
   
 ```subtype:``` Type of the object (eg. "BRIDGE").
-```mlc:``` Military Load Classification IAW NATO STANAG 2174 https://www.osti.gov/servlets/purl/531084/ (eg. 150).
-  "removalCost": 5000000
-}
-```
+  
+```mlc:``` Military Load Classification IAW NATO STANAG 2021 [Guide](https://www.osti.gov/servlets/purl/531084/) (eg. 150). In this version MLC was used in accordance of data availability. The method based on bridge MLC and vehicle MLC comparison.
+  
+```removalCost:``` Cost of removing/rebuiling the object (eg. 50000).
+
 </details>
 <details>
 
 <summary>CurvatureObstruction</summary>
+
+In this version the bend is described as a perfect arc of a circle.
   
-```
-{
-  "outerRadius": 30000,
-  "boundaryRadius": 0,
-  "innerRadius": 23000,
-  "outerLimit": 0,
-  "removalCost": 5000000
-}
-```
+```outerRadius:``` Outer radius (in millimeters) of the bend (eg. 30000).
+
+```innerRadius:``` Inner radius (in millimeters) of the band (eg. 23000).
+  
+```boundaryRadius:``` The radius of the obstacle inside the bend (eg. 0 - if there is no such object).
+
+```outerLimit:``` The radius of the obstacle outside the bend (eg. 31000 - if the object is located 1000 mm beyond the outer curb of the road).
+
+```removalCost:``` Cost of removing/rebuiling the object (eg. 50000).
+
 </details>
 <details>
 
