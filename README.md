@@ -25,6 +25,7 @@ In order to successfully run the tool you need to:
 <details>
 
 <summary>Node</summary>
+
 ```
 {
   "name": "Drobin",
@@ -36,6 +37,7 @@ In order to successfully run the tool you need to:
 <details>
 
 <summary>Road</summary>
+  
 ```
 {
   "lat1": 52.149095,
@@ -64,6 +66,7 @@ In order to successfully run the tool you need to:
 <details>
 
 <summary>Obstacle</summary>
+  
 ```
 {
   "milestone": 430.48,
@@ -79,6 +82,7 @@ In order to successfully run the tool you need to:
 <details>
 
 <summary>HeightObstruction</summary>
+  
 ```
 {
   "limit": 5000,
@@ -92,6 +96,7 @@ In order to successfully run the tool you need to:
 <details>
 
 <summary>WidthObstruction</summary>
+  
 ```
 {
   "ranges": [
@@ -111,6 +116,7 @@ In order to successfully run the tool you need to:
 <details>
 
 <summary>WeightObstruction</summary>
+  
 ```
 {
   "limit": 0,
@@ -123,6 +129,7 @@ In order to successfully run the tool you need to:
 <details>
 
 <summary>CurvatureObstruction</summary>
+  
 ```
 {
   "outerRadius": 30000,
@@ -146,6 +153,7 @@ In order to successfully run the tool you need to:
 <details>
 
 <summary>Roundabout</summary>
+  
 ```
 {
   "outerDiameter": 21000,
@@ -160,6 +168,7 @@ In order to successfully run the tool you need to:
 <details>
 
 <summary>RestPoint</summary>
+  
 ```
 {
   "slotLength": 20000,
@@ -182,6 +191,7 @@ In order to successfully run the tool you need to:
 <details>
 
 <summary>Subnode</summary>
+  
 ```
 {
   "subID": 16,
