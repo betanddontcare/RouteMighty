@@ -58,7 +58,7 @@ In order to successfully run the tool you need to:
   
 ```kmRange:``` Boundary chainage of the road (eg. [410.068, 420.628].
   
-```width:``` Width (in milimeters) of the road (eg. 7000).
+```width:``` Width (in millimeters) of the road (eg. 7000).
 
 ```name:``` Name of the road (eg. "Gr. Woj. - Sochaczew").
   
@@ -71,27 +71,33 @@ In order to successfully run the tool you need to:
 
 <summary>Obstacle</summary>
   
-```milestone:``` Chainage where the object occurs (eg.  430.48)
-```immovable:``` Boolean. Possibility to remove the object: True/False
-```city:``` Name of the city where the object is located (eg. "Kopiska")
-```latitude:``` Latitude of the object (eg. 52.1192)
-```longitude:``` Longitude of the object (eg. 20.507849)
-```name:``` Name of the object (eg. "St. Paul's Bridge")
+```milestone:``` Chainage where the object occurs (eg. 430.48).
+  
+```immovable:``` Boolean. Possibility to remove the object: True/False.
+  
+```city:``` Name of the city where the object is located (eg. "Kopiska").
+  
+```latitude:``` Latitude of the object (eg. 52.1192).
+  
+```longitude:``` Longitude of the object (eg. 20.507849).
+  
+```name:``` Name of the object (eg. "St. Paul's Bridge").
 
 </details>
 <details>
 
 <summary>HeightObstruction</summary>
   
-```
-{
-  "limit": 5000,
-  "range": 0,
-  "subtype": "OVERPASS",
-  "profile": "LINE",
-  "removalCost": 5000000
-}
-```
+```limit:``` Height limit (maximum value in millimeters) of the object (eg. 5000).
+  
+```range:``` Difference between the lowest and the highest point of the height limiting object: 0 - if the limiting object height is the same in every point over the road; >0 is the profile of the object is inclined relative to the road.
+  
+```subtype:``` Type of the object (eg. "OVERPASS").
+  
+```profile:``` Shape of the profile over the road. In this version there is only one type available: "LINE".
+  
+```removalCost:``` Cost of removing/rebuiling the object (eg. 50000).
+
 </details>
 <details>
 
