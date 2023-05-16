@@ -71,17 +71,13 @@ In order to successfully run the tool you need to:
 
 <summary>Obstacle</summary>
   
-```
-{
-  "milestone": 430.48,
-  "immovable": true,
-  "city": "Kopiska",
-  "latitude": 52.1192,
-  "name": "Most",
-  "url": "",
-  "longitude": 20.507849
-}
-```
+```milestone:``` Chainage where the object occurs (eg.  430.48)
+```immovable:``` Boolean. Possibility to remove the object: True/False
+```city:``` Name of the city where the object is located (eg. "Kopiska")
+```latitude:``` Latitude of the object (eg. 52.1192)
+```longitude:``` Longitude of the object (eg. 20.507849)
+```name:``` Name of the object (eg. "St. Paul's Bridge")
+
 </details>
 <details>
 
