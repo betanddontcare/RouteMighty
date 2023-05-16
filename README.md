@@ -104,6 +104,10 @@ Configure the ```server.py``` file and host a Flask microservice.
 
 ```maxTime```	maximum travel time [in minutes]
 
+Example of correct JSON object needed to request:
+
+```{'vLength' : 10000, 'vWidth' : 3000, 'vWidthTop' : 3000, 'vWidthRangeStart' : 0, 'vWidthRangeEnd' : 4000, 'vHeight' : 4000, 'vMlc' : 100, 'vClerance' : 500, 'vFirstAxle' : 15000, 'vLastAxle' : 23000, 'vTireWidth' : 300, 'vSpacing' : 2700, 'vAngle' : 45, 'vLoad' : 115, 'vBolt' : 5000, 'vHazardous' : False, 'vValue' : 40000, 'vDrivers' : 1, 'singleDriveTime' : 300, 'dailyDriveTime' : 500, 'weeklyDriveTime' : 3000, 'start' : 749, 'end' : 97, 'daysToDepart' : 3, 'maxCost' : 100000, 'maxTime' : 1000}```
+
 # Neo4j Graph Database structure
 ![neo4j_struct](https://github.com/betanddontcare/RouteMighty/assets/31188390/a5318089-d160-468b-9028-088fdedcd3fd)
 
