@@ -31,31 +31,56 @@ Step 5: Sign-up on [OpenWeather](https://openweathermap.org/) webservice and gen
 Step 6: Configure the ```server.py``` file and host a Flask microservice. 
 
 Step 7: Send a ```POST``` query to the Flask. The request should be a JSON object consists of a following parameters:
+
 ```length```	rigid lorry or semi-trailer length
+
 ```width```	maximum vehicle width
+
 ```width_top```	vehicle width at maximum height
+
 ```width_range_start```	height from which the maximum width of the vehicle occurs
+
 ```width_range_end```	height up to which the maximum width of the vehicle occurs
+
 ```height```	vehicle height
+
 ```mlc```	MLC class value of the vehicle
+
 ```clearance```	ground clearance
+
 ```first_axle```	distance between the front bumper and the first axle located behind the geometric centre of the vehicle in a rigid lorry (if the vehicle has more than 2 axles) or the front of the semi-trailer and its first axle
+
 ```last_axle```	distance between the front bumper and the last axle on a rigid lorry or the front of the semi-trailer and its last axle
+
 ```width_tire```	tire width
 ```spacing```	wheelbase of a vehicle
+
 ```angle```	maximum steering angle of the last axle of the vehicle
+
 ```load```	the highest value of the axle load
+
 ```bolt```	distance between the front bumper and the first axle in a rigid lorry, or the distance between the front of the semi-trailer and the fifth wheel
+
 ```hazardous```	presence of dangerous goods
+
 ```value```	cargo value
+
 ```drivers```	number of drivers in the crew
+
 ```single_drive_time```	maximum single driving time
+
 ```daily_drive_time```	maximum daily driving time
+
 ```weekly_drive_time```	maximum weekly driving time
+
 ```start_point_id```	id of the defined start node
+
 ```end_point_id```	id of the defined end node
+
 ```day_to_depart```	number of days until planned departure
+
 ```max_cost```	maximum amount declared by the carrier to cover the costs of disassembly/reconstruction of infrastructure elements
+
 ```max_time_travel```	maximum travel time
 
 # Neo4j Graph Database structure
