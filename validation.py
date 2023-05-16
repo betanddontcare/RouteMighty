@@ -149,8 +149,8 @@ def is_valid_by_elevation(v_clearance, v_distance, r_elevation_rad):
 def get_impassable_nodes(vehicle_params, roundabouts):
     impassable_nodes = []
     for ra in roundabouts:
-        ra_outer_diameter = ra['outerDiameter']
-        ra_inner_diameter = ra['innerDiameter']
+        ra_outer_radius = ra['outerRadius']
+        ra_inner_radius = ra['innerRadius']
         ra_vertical_island = ra['verticalIsland']
         ra_outer_limit = ra['outerLimit']
         ra_open = ra['open']
@@ -158,20 +158,20 @@ def get_impassable_nodes(vehicle_params, roundabouts):
             impassable_nodes.append(ra)
     return impassable_nodes
 
-def is_valid_by_roundabout_size(v_length, v_width, v_first_axle, v_last_axle, v_tire_width, v_angle, v_spacing, v_bolt, ra_outer_diameter, ra_inner_diameter, ra_open, ra_island, ra_outer_limit):
+def is_valid_by_roundabout_size(v_length, v_width, v_first_axle, v_last_axle, v_tire_width, v_angle, v_spacing, v_bolt, ra_outer_radius, ra_inner_radius, ra_open, ra_island, ra_outer_limit):
     if ra_open == "True":
         return True
     else:
-        if (v_last_axle - v_bolt + v_spacing + 2 * v_tire_width) < 2 * ra_outer_diameter:
+        if (v_last_axle - v_bolt + v_spacing + 2 * v_tire_width) < 2 * ra_outer_radius:
             if ra_island == 0 and ra_outer_limit == 0:
-                return (v_angle >= 90 - math.degrees(math.acos(((v_last_axle - v_bolt) / 2) / (ra_outer_diameter - v_tire_width - (v_spacing / 2)))))
+                return (v_angle >= 90 - math.degrees(math.acos(((v_last_axle - v_bolt) / 2) / (ra_outer_radius - v_tire_width - (v_spacing / 2)))))
             elif ra_island == 0 and ra_outer_limit > 0:
                 if (ra_outer_limit > v_length - v_last_axle + (v_last_axle - v_bolt) / 2):
-                    return ((v_angle >= math.degrees(math.atan(((v_last_axle - v_bolt) / 2) / (math.sqrt(pow(ra_outer_limit, 2) - pow(v_length - v_last_axle + ((v_last_axle - v_bolt) / 2), 2)) - (v_width / 2))))) and ((ra_inner_diameter + v_tire_width + (v_spacing / 2)) < math.sqrt(pow((math.sqrt(pow(ra_outer_limit, 2) - pow(v_length - v_last_axle + ((v_last_axle - v_bolt) / 2), 2)) - (v_width / 2)), 2) + pow((v_first_axle - v_bolt -((v_last_axle - v_bolt) / 2)), 2))))
+                    return ((v_angle >= math.degrees(math.atan(((v_last_axle - v_bolt) / 2) / (math.sqrt(pow(ra_outer_limit, 2) - pow(v_length - v_last_axle + ((v_last_axle - v_bolt) / 2), 2)) - (v_width / 2))))) and ((ra_inner_radius + v_tire_width + (v_spacing / 2)) < math.sqrt(pow((math.sqrt(pow(ra_outer_limit, 2) - pow(v_length - v_last_axle + ((v_last_axle - v_bolt) / 2), 2)) - (v_width / 2)), 2) + pow((v_first_axle - v_bolt -((v_last_axle - v_bolt) / 2)), 2))))
                 else:
                     return False
             elif ra_island > 0 and ra_outer_limit == 0:
-                return ((ra_island < math.sqrt(pow((ra_outer_diameter - v_tire_width - (v_spacing / 2)), 2) - pow(((v_last_axle - v_bolt) / 2), 2)) - (v_width / 2)) and (v_angle >= 90 - math.degrees(math.acos(((v_last_axle - v_bolt) / 2) / (ra_outer_diameter - v_tire_width - (v_spacing / 2))))))
+                return ((ra_island < math.sqrt(pow((ra_outer_radius - v_tire_width - (v_spacing / 2)), 2) - pow(((v_last_axle - v_bolt) / 2), 2)) - (v_width / 2)) and (v_angle >= 90 - math.degrees(math.acos(((v_last_axle - v_bolt) / 2) / (ra_outer_radius - v_tire_width - (v_spacing / 2))))))
             else:
                 if (ra_outer_limit > v_length - v_last_axle + (v_last_axle - v_bolt) / 2):
                     return ((v_width + ra_island < math.sqrt(pow(ra_outer_limit, 2) - pow(v_length - v_last_axle + ((v_last_axle - v_bolt) / 2), 2)) - (v_width / 2)) and (v_angle >= math.degrees(math.atan(((v_last_axle - v_bolt) / 2) / (math.sqrt(pow(ra_outer_limit, 2) - pow(v_length - v_last_axle + ((v_last_axle - v_bolt) / 2), 2)) - (v_width / 2))))) and (ra_inner_diameter + v_tire_width + (v_spacing / 2) < math.sqrt(pow(math.sqrt(pow(ra_outer_limit, 2) - pow(v_length - v_last_axle + ((v_last_axle - v_bolt) / 2), 2)) - (v_width / 2), 2) + pow((v_first_axle - v_bolt -((v_last_axle - v_bolt) / 2)), 2))))
