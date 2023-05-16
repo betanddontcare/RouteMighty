@@ -9,7 +9,9 @@ This software based on a novel method developed in my PhD disseration titled: [C
 
 # Requirements & Installation
 In order to successfully run the tool you need to:
-Step 1: Install all the requirements before proceeding to next steps:
+##Step 1: 
+
+Install all the requirements before proceeding to next steps:
 
 * Flask==2.3.2
 * Flask-Cors==3.0.10
@@ -20,17 +22,27 @@ You should install all the python3 modules using the pip3 install *package_name*
 
 (or alternatively using: sudo apt-get install python3-*package_name* conmmand)
 
-Step 2: Create the transportation network based on the structure presented in **Neo4j Graph Database** structure chapter using Neo4j. 
+##Step 2: 
 
-Step 3: Host your graph database locally or in the cloud. Fill the IP address of your server in the ```main.py``` file (```server_ip``` variable). 
+Create the transportation network based on the structure presented in **Neo4j Graph Database** structure chapter using Neo4j. 
 
-Step 4: Assign your login and password to the ```GraphDatabase.driver()``` in ```main.py``` file.
+##Step 3: 
 
-Step 5: Sign-up on [OpenWeather](https://openweathermap.org/) webservice and generate your API key for Daily Forecast 16 days service. Assign your API key to ```open_weather_api_key``` variable in ```weather.py```.
+Host your graph database locally or in the cloud. Fill the IP address of your server in the ```main.py``` file (```server_ip``` variable). 
 
-Step 6: Configure the ```server.py``` file and host a Flask microservice. 
+##Step 4: 
 
-Step 7: Send a ```POST``` query to the Flask. The request should be a JSON object consists of a following parameters:
+Assign your login and password to the ```GraphDatabase.driver()``` in ```main.py``` file.
+
+##Step 5: 
+
+Sign-up on [OpenWeather](https://openweathermap.org/) webservice and generate your API key for Daily Forecast 16 days service. Assign your API key to ```open_weather_api_key``` variable in ```weather.py```.
+
+##Step 6: 
+
+Configure the ```server.py``` file and host a Flask microservice. 
+
+##Step 7: Send a ```POST``` query to the Flask. The request should be a JSON object consists of a following parameters:
 
 ```length```	rigid lorry or semi-trailer length
 
