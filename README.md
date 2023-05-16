@@ -8,6 +8,7 @@ This software based on a novel method developed in my PhD disseration titled: [C
 ![rm_arch](https://github.com/betanddontcare/RouteMighty/assets/31188390/5681e7e6-bbae-4432-a9f6-f9c5d188dc79)
 
 # Requirements & Installation
+In order to successfully run the tool you need to:
 Step 1: Install all the requirements before proceeding to next steps:
 
 * Flask==2.3.2
@@ -25,9 +26,37 @@ Step 3: Host your graph database locally or in the cloud. Fill the IP address of
 
 Step 4: Assign your login and password to the ```GraphDatabase.driver()``` in ```main.py``` file.
 
-Step 5. Sign-up on [OpenWeather](https://openweathermap.org/) webservice and generate your API key for Daily Forecast 16 days service. Assign your API key to ```open_weather_api_key``` variable in ```weather.py```.
+Step 5: Sign-up on [OpenWeather](https://openweathermap.org/) webservice and generate your API key for Daily Forecast 16 days service. Assign your API key to ```open_weather_api_key``` variable in ```weather.py```.
 
-In order to successfully run the tool you need to:
+Step 6: Configure the ```server.py``` file and host a Flask microservice. 
+
+Step 7: Send a ```POST``` query to the Flask. The request should be a JSON object consists of a following parameters:
+```length```	rigid lorry or semi-trailer length
+```width```	maximum vehicle width
+```width_top```	vehicle width at maximum height
+```width_range_start```	height from which the maximum width of the vehicle occurs
+```width_range_end```	height up to which the maximum width of the vehicle occurs
+```height```	vehicle height
+```mlc```	MLC class value of the vehicle
+```clearance```	ground clearance
+```first_axle```	distance between the front bumper and the first axle located behind the geometric centre of the vehicle in a rigid lorry (if the vehicle has more than 2 axles) or the front of the semi-trailer and its first axle
+```last_axle```	distance between the front bumper and the last axle on a rigid lorry or the front of the semi-trailer and its last axle
+```width_tire```	tire width
+```spacing```	wheelbase of a vehicle
+```angle```	maximum steering angle of the last axle of the vehicle
+```load```	the highest value of the axle load
+```bolt```	distance between the front bumper and the first axle in a rigid lorry, or the distance between the front of the semi-trailer and the fifth wheel
+```hazardous```	presence of dangerous goods
+```value```	cargo value
+```drivers```	number of drivers in the crew
+```single_drive_time```	maximum single driving time
+```daily_drive_time```	maximum daily driving time
+```weekly_drive_time```	maximum weekly driving time
+```start_point_id```	id of the defined start node
+```end_point_id```	id of the defined end node
+```day_to_depart```	number of days until planned departure
+```max_cost```	maximum amount declared by the carrier to cover the costs of disassembly/reconstruction of infrastructure elements
+```max_time_travel```	maximum travel time
 
 # Neo4j Graph Database structure
 ![neo4j_struct](https://github.com/betanddontcare/RouteMighty/assets/31188390/a5318089-d160-468b-9028-088fdedcd3fd)
