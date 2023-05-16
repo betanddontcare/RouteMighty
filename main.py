@@ -5,7 +5,7 @@ from math import ceil
 
 server_ip = #YOUR NEO4J SERVER IP
 uri = f"bolt://{server_ip}:7687"
-driver = GraphDatabase.driver(uri, auth=(#YOUR_LOGIN, #YOUR_PASSWORD))
+driver = GraphDatabase.driver(uri, auth=(#YOUR LOGIN, #YOUR PASSWORD))
 
 #NEO4j QUERIES
 def find_all_roads(tx):
