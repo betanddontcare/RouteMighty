@@ -143,6 +143,7 @@ In order to successfully run the tool you need to:
 <details>
 
 <summary>ElevationObstruction</summary>
+  
 ```
 {
   "verticalCurveRadius": 200000,
