@@ -127,7 +127,16 @@ Every route contains:
 2. Additional parameters useful for assessment and for planning process improvement:
 
  ```length:``` Total length (in kilometers) of the route (eg. 83.917).
- ```trafficFactor:``` Traffic factor reflects how much longer or shorter the time required to cover the distance between the nodes $v$ and $v'$ is in relation to the historical average travel time (eg. 1.0262)Traffic parameter 1.016, 'timeTravel': 64, 'restpoints': ['Shorter'], 'impassableObjects': [{'identity': 1122, 'name': 'Oznakowanie pionowe', 'milestone': 209.8, 'number': ['50'], 'latitude': 52.150281, 'longitude': 21.504701}], 'impassableRoundabouts': [], 'cost': 200, 'weather': [], 'weatherIndex': 0.2626, 'safetyIndex': 0.2668}
+ 
+ ```trafficFactor:``` Total traffic factor reflects how much longer or shorter the time required to cover the distance between the starting point and ending point in relation to the historical average travel time (eg. 1.0262 - means that travel lasts 2,62% longer).
+ 
+ ```timeTravel:``` Total driving time [in minutes] taking into consideration traffic factor (eg. 64).
+ 
+ ```restpoints:``` List of valid respoints proposed by algorithm for stops or ```'Shorter'``` string if a stop is not needed.
+ 
+ ```impassableObjects:``` List of impassable infrastructure object if the sum of removal cost is lower than declared by the operator (eg. ```[{'identity': 1122, 'name': 'Oznakowanie pionowe', 'milestone': 209.8, 'number': ['50'], 'latitude': 52.150281, 'longitude': 21.504701}]```.
+ 
+ ```passableRoundabouts': [], 'cost': 200, 'weather': [], 'weatherIndex': 0.2626, 'safetyIndex': 0.2668}
 
 
 # Neo4j Graph Database structure
