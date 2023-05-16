@@ -263,10 +263,5 @@ with driver.session() as session:
         result = get_json()
         return result
 
-    calculate({'vLength' : 10000, 'vWidth' : 3000, 'vWidthTop' : 3000, 'vWidthRangeStart' : 0, 'vWidthRangeEnd' : 4000, 'vHeight' : 4000, 
-           'vMlc' : 100, 'vClerance' : 500, 'vFirstAxle' : 15000, 'vLastAxle' : 23000, 'vTireWidth' : 300, 'vSpacing' : 2700, 'vAngle' : 45, 
-           'vLoad' : 115, 'vBolt' : 5000, 'vHazardous' : False, 'vValue' : 40000, 'vDrivers' : 1, 'singleDriveTime' : 300, 'dailyDriveTime' : 500, 
-           'weeklyDriveTime' : 3000, 'start' : 749, 'end' : 97, 'daysToDepart' : 3, 'maxCost' : 100000, 'maxTime' : 1000})
-
 driver.close()
 
