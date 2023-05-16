@@ -19,7 +19,13 @@ You should install all the python3 modules using the pip3 install *package_name*
 
 (or alternatively using: sudo apt-get install python3-*package_name* conmmand)
 
-Step 2: Create the transportation network based on the structure presented in **Neo4j Graph Database** structure chapter using Neo4j.
+Step 2: Create the transportation network based on the structure presented in **Neo4j Graph Database** structure chapter using Neo4j. 
+
+Step 3: Host your graph database locally or in the cloud. Fill the IP address of your server in the ```main.py``` file (```server_ip``` variable). 
+
+Step 4: Assign your login and password to the ```GraphDatabase.driver()``` in ```main.py``` file.
+
+Step 5. Sign-up on [OpenWeather](https://openweathermap.org/) webservice and generate your API key for Daily Forecast 16 days service. Assign your API key to ```open_weather_api_key``` variable in ```weather.py```.
 
 In order to successfully run the tool you need to:
 
