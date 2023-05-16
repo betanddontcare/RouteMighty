@@ -131,7 +131,7 @@ These two above example variables means that the object has width limitation: 1.
 
 <summary>CurvatureObstruction</summary>
 
-In this version the bend is described as a perfect arc of a circle.
+In this version the bend is described as an arc of a perfect circle.
   
 ```outerRadius:``` Outer radius (in millimeters) of the bend (eg. 30000).
 
@@ -148,20 +148,15 @@ In this version the bend is described as a perfect arc of a circle.
 
 <summary>ElevationObstruction</summary>
   
-```
-{
-  "verticalCurveRadius": 200000,
-  "removalCost": 5000000
-}
-```
+```verticalCurveRadius:``` Vertical radius (in millimeters) of the curve (eg. 200000). In this version the curve is described as an arc of a perfect circle.
+```removalCost:``` Cost of removing/rebuiling the object (eg. 50000).
+
 </details>
 <details>
 
 <summary>Roundabout</summary>
   
-```
-{
-  "outerDiameter": 21000,
+```outerRadius:``` 21000,
   "verticalIsland": 8000,
   "outerLimit": 0,
   "innerDiameter": 11000,
