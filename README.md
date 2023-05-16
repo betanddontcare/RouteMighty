@@ -104,25 +104,24 @@ In order to successfully run the tool you need to:
 <summary>WidthObstruction</summary>
   
 ```ranges:``` Height ranges on which particular width constraints occur (eg. [500, 1500]. This parameter is connected with ```limits```.
-```limits:``` Width restriction values for individual height ranges calculated from the center of the roadway (eg. [4000, 5000]). In this version there is no possibility to reflect the non symmetric object, which is limiting the width from both sides in different ways.
-These two above example variables means that the object has width limitation: 1. 4000 mm from the center of the road towards the shoulder to a height of 500 mm above the road; 2. 5000 mm from the center of the road towards the shoulder on the height between 500 mm and 1500 mm.
   
-  "subtype": "OTHER",
+```limits:``` Width restriction values for individual height ranges calculated from the center of the roadway (eg. [4000, 5000]). In this version there is no possibility to reflect the non symmetric object, which is limiting the width from both sides in different ways.
+  
+These two above example variables means that the object has width limitation: 1. 4000 mm from the center of the road towards the shoulder to a height of 500 mm above the road; 2. 5000 mm from the center of the road towards the shoulder on the height between 500 mm and 1500 mm.
+
+```subtype:``` Type of the object (eg. "TUNNEL").
  
-  "symmetric": true,
-  "removalCost": 5000000
-}
-```
+```symmetric:``` Boolean. Is the object symmetric: True/False.
+  
+```removalCost:``` Cost of removing/rebuiling the object (eg. 50000).
+
 </details>
 <details>
 
 <summary>WeightObstruction</summary>
   
-```
-{
-  "limit": 0,
-  "subtype": "BRIDGE",
-  "mlc": 150,
+```subtype:``` Type of the object (eg. "BRIDGE").
+```mlc:``` Military Load Classification IAW NATO STANAG 2174 https://www.osti.gov/servlets/purl/531084/ (eg. 150).
   "removalCost": 5000000
 }
 ```
