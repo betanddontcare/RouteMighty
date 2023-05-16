@@ -238,3 +238,4 @@ For more information please read my paper [Parking Lots Assignment Algorithm for
 ```ROAD``` – which is the relational equivalent of the Road in the routes graph. This relation should consist parameter ```subID``` which refers to specific ```Road``` object (eg. 143).
 
 # Validation functions
+## TBA
