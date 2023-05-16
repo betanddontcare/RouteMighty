@@ -38,9 +38,26 @@ In order to successfully run the tool you need to:
 <summary>Road</summary>
 ```
 {
-  "name": "Drobin",
-  "latitude": 52.737228,
-  "longitude": 19.995445
+  "lat1": 52.149095,
+  "lat2": 52.219148,
+  "midLongitude": 20.15469410414446,
+  "maxAxleLoad": 115.0,
+  "numbers": [
+    "92"
+  ],
+  "trafficFactor": 1.0262,
+  "type": "GP",
+  "midLatitude": 52.18413180707769,
+  "lon1": 20.105352,
+  "lon2": 20.204114,
+  "kmRange": [
+    410.068,
+    420.628
+  ],
+  "width": 7000,
+  "name": "Gr. Woj. - Sochaczew",
+  "lines": 1,
+  "direction": "TWO_WAY"
 }
 ```
 </details>
@@ -49,9 +66,13 @@ In order to successfully run the tool you need to:
 <summary>Obstacle</summary>
 ```
 {
-  "name": "Drobin",
-  "latitude": 52.737228,
-  "longitude": 19.995445
+  "milestone": 430.48,
+  "immovable": true,
+  "city": "Kopiska",
+  "latitude": 52.1192,
+  "name": "Most",
+  "url": "",
+  "longitude": 20.507849
 }
 ```
 </details>
@@ -60,9 +81,11 @@ In order to successfully run the tool you need to:
 <summary>HeightObstruction</summary>
 ```
 {
-  "name": "Drobin",
-  "latitude": 52.737228,
-  "longitude": 19.995445
+  "limit": 5000,
+  "range": 0,
+  "subtype": "OVERPASS",
+  "profile": "LINE",
+  "removalCost": 5000000
 }
 ```
 </details>
@@ -71,9 +94,17 @@ In order to successfully run the tool you need to:
 <summary>WidthObstruction</summary>
 ```
 {
-  "name": "Drobin",
-  "latitude": 52.737228,
-  "longitude": 19.995445
+  "ranges": [
+    500,
+    1500
+  ],
+  "subtype": "OTHER",
+  "limits": [
+    4000,
+    5000
+  ],
+  "symmetric": true,
+  "removalCost": 5000000
 }
 ```
 </details>
@@ -82,9 +113,10 @@ In order to successfully run the tool you need to:
 <summary>WeightObstruction</summary>
 ```
 {
-  "name": "Drobin",
-  "latitude": 52.737228,
-  "longitude": 19.995445
+  "limit": 0,
+  "subtype": "BRIDGE",
+  "mlc": 150,
+  "removalCost": 5000000
 }
 ```
 </details>
@@ -93,9 +125,11 @@ In order to successfully run the tool you need to:
 <summary>CurvatureObstruction</summary>
 ```
 {
-  "name": "Drobin",
-  "latitude": 52.737228,
-  "longitude": 19.995445
+  "outerRadius": 30000,
+  "boundaryRadius": 0,
+  "innerRadius": 23000,
+  "outerLimit": 0,
+  "removalCost": 5000000
 }
 ```
 </details>
@@ -104,9 +138,8 @@ In order to successfully run the tool you need to:
 <summary>ElevationObstruction</summary>
 ```
 {
-  "name": "Drobin",
-  "latitude": 52.737228,
-  "longitude": 19.995445
+  "verticalCurveRadius": 200000,
+  "removalCost": 5000000
 }
 ```
 </details>
@@ -115,20 +148,34 @@ In order to successfully run the tool you need to:
 <summary>Roundabout</summary>
 ```
 {
-  "name": "Drobin",
-  "latitude": 52.737228,
-  "longitude": 19.995445
+  "outerDiameter": 21000,
+  "verticalIsland": 8000,
+  "outerLimit": 0,
+  "innerDiameter": 11000,
+  "open": false,
+  "removalCost": 5000000
 }
 ```
 </details>
 <details>
 
-<summary>RestPointn</summary>
+<summary>RestPoint</summary>
 ```
 {
-  "name": "Drobin",
-  "latitude": 52.737228,
-  "longitude": 19.995445
+  "slotLength": 20000,
+  "restpointType": "PRIVATE",
+  "occupancy": 0.36,
+  "hazardousSlots": 0,
+  "lighting": true,
+  "cctv": false,
+  "security": false,
+  "barriers": true,
+  "milestone": 413.8,
+  "slotWidth": 4000,
+  "oversizeWidth": 0,
+  "roadNumber": "S7",
+  "generalSlots": 20,
+  "oversizeLength": 0
 }
 ```
 </details>
@@ -137,9 +184,8 @@ In order to successfully run the tool you need to:
 <summary>Subnode</summary>
 ```
 {
-  "name": "Drobin",
-  "latitude": 52.737228,
-  "longitude": 19.995445
+  "subID": 16,
+  "name": "Ostrzykowizna"
 }
 ```
 </details>
