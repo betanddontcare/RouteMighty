@@ -19,7 +19,7 @@ You should install all the python3 modules using the pip3 install *package_name*
 
 (or alternatively using: sudo apt-get install python3-*package_name* conmmand)
 
-Step 2: 
+Step 2: Create the transportation network based on the structure presented in ## Neo4j Graph Database structure chapter using Neo4j.
 
 In order to successfully run the tool you need to:
 
