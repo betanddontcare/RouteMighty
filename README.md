@@ -36,12 +36,13 @@ In order to successfully run the tool you need to:
 
 <summary>Road</summary>
   
-```
-{
-  "lat1": 52.149095,
-  "lat2": 52.219148,
-  "midLongitude": 20.15469410414446,
-  "maxAxleLoad": 115.0,
+```lat1:``` Latitude of starting node (eg. 52.149095)
+```lat2:``` Latitude of ending node (eg. 52.219148)
+```midLatitude:``` Latitude of the point located halfway between starting and ending nodes (eg. 52.18413180707769)
+```lon1:``` Longitude of starting node (eg. 20.105352)
+```lon2":``` Longitude of ending node (eg. 20.204114)
+```midLongitude:```  Longitude of the point located halfway between starting and ending nodes (eg. 20.15469410414446)
+```maxAxleLoad:``` Maximum axle load (in tonnes) acceptable on the road (eg. 115.0)
   "numbers": [
     "92"
   ],
