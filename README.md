@@ -211,12 +211,9 @@ For more information please read my paper [Parking Lots Assignment Algorithm for
 
 <summary>Subnode</summary>
   
-```
-{
-  "subID": 16,
-  "name": "Ostrzykowizna"
-}
-```
+```subID:``` The id of ```Node``` to which ```Subnode``` refers (eg. 16).
+```name:``` Subnode name - the same as ```Node``` (eg. "Ostrzykowizna")
+
 </details>
 
 ## Relationships
