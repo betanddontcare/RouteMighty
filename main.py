@@ -28,8 +28,8 @@ def find_all_obstacles_on_roads(tx):
 
 def find_roundabouts(tx):
     roundabouts = []
-    result = tx.run("MATCH p=((n:Node)-[r:IS_ROUNDABOUT]-(m:Roundabout)) RETURN ID(n) as identity, n.name as name, ID(m) as obstacleID, m.outerDiameter as outerDiameter, "\
-    "m.innerDiameter as innerDiameter, m.verticalIsland as verticalIsland, m.open as open, m.removalCost as removalCost, m.outerLimit as outerLimit")
+    result = tx.run("MATCH p=((n:Node)-[r:IS_ROUNDABOUT]-(m:Roundabout)) RETURN ID(n) as identity, n.name as name, ID(m) as obstacleID, m.outerRadius as outerRadius, "\
+    "m.innerRadius as innerRadius, m.verticalIsland as verticalIsland, m.open as open, m.removalCost as removalCost, m.outerLimit as outerLimit")
     for record in result:
         roundabouts.append(record)
     return roundabouts
