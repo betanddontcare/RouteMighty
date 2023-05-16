@@ -1,7 +1,9 @@
-![rm](https://github.com/betanddontcare/RouteMighty/assets/31188390/5bb86f8b-00c2-496d-b1ba-381481eacdc5)
+![rm](https://github.com/betanddontcare/RouteMighty/assets/31188390/af0f6a33-c0a6-4066-9ac9-3eda41aed941)
 
 # RouteMighty 1.2.0
 RouteMighty is a software application engine developed in Python for the efficient planning of routes for abnormal vehicles, such as those that are overweight or oversized.
+
+![rm_arch](https://github.com/betanddontcare/RouteMighty/assets/31188390/5681e7e6-bbae-4432-a9f6-f9c5d188dc79)
 
 # Requirements & Installation
 Step 1: Install all the requirements before proceeding to next steps:
@@ -15,5 +17,12 @@ You should install all the python3 modules using the pip3 install *package_name*
 Step 2: 
 
 In order to successfully run the tool you need to:
+
+# Neo4j Graph Database structure
+![neo4j_struct](https://github.com/betanddontcare/RouteMighty/assets/31188390/a5318089-d160-468b-9028-088fdedcd3fd)
+
+## Node objects
+
+## Relationships
 
 # Validation functions
