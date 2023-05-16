@@ -22,6 +22,127 @@ In order to successfully run the tool you need to:
 ![neo4j_struct](https://github.com/betanddontcare/RouteMighty/assets/31188390/a5318089-d160-468b-9028-088fdedcd3fd)
 
 ## Node objects
+<details>
+
+<summary>Node</summary>
+```
+{
+  "name": "Drobin",
+  "latitude": 52.737228,
+  "longitude": 19.995445
+}
+```
+</details>
+<details>
+
+<summary>Road</summary>
+```
+{
+  "name": "Drobin",
+  "latitude": 52.737228,
+  "longitude": 19.995445
+}
+```
+</details>
+<details>
+
+<summary>Obstacle</summary>
+```
+{
+  "name": "Drobin",
+  "latitude": 52.737228,
+  "longitude": 19.995445
+}
+```
+</details>
+<details>
+
+<summary>HeightObstruction</summary>
+```
+{
+  "name": "Drobin",
+  "latitude": 52.737228,
+  "longitude": 19.995445
+}
+```
+</details>
+<details>
+
+<summary>WidthObstruction</summary>
+```
+{
+  "name": "Drobin",
+  "latitude": 52.737228,
+  "longitude": 19.995445
+}
+```
+</details>
+<details>
+
+<summary>WeightObstruction</summary>
+```
+{
+  "name": "Drobin",
+  "latitude": 52.737228,
+  "longitude": 19.995445
+}
+```
+</details>
+<details>
+
+<summary>CurvatureObstruction</summary>
+```
+{
+  "name": "Drobin",
+  "latitude": 52.737228,
+  "longitude": 19.995445
+}
+```
+</details>
+<details>
+
+<summary>ElevationObstruction</summary>
+```
+{
+  "name": "Drobin",
+  "latitude": 52.737228,
+  "longitude": 19.995445
+}
+```
+</details>
+<details>
+
+<summary>Roundabout</summary>
+```
+{
+  "name": "Drobin",
+  "latitude": 52.737228,
+  "longitude": 19.995445
+}
+```
+</details>
+<details>
+
+<summary>RestPointn</summary>
+```
+{
+  "name": "Drobin",
+  "latitude": 52.737228,
+  "longitude": 19.995445
+}
+```
+</details>
+<details>
+
+<summary>Subnode</summary>
+```
+{
+  "name": "Drobin",
+  "latitude": 52.737228,
+  "longitude": 19.995445
+}
+```
+</details>
 
 ## Relationships
 
