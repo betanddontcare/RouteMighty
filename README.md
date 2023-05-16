@@ -50,57 +50,59 @@ Configure the ```server.py``` file and host a Flask microservice.
 ![vehic](https://github.com/betanddontcare/RouteMighty/assets/31188390/514e4089-d2c5-469e-a86a-6dfc83db9412)
 
 
-```vLength```	rigid lorry or semi-trailer length
+```vLength```	rigid lorry or semi-trailer length [in millimeters]
 
-```vWidth```	maximum vehicle width
+```vWidth```	maximum vehicle width [in millimeters]
 
-```vWidthTop```	vehicle width at maximum height
+```vWidthTop```	vehicle width at maximum height [in millimeters]
 
-```vWidthRangeStart```	height from which the maximum width of the vehicle occurs
+```vWidthRangeStart```	height from which the maximum width of the vehicle occurs [in millimeters]
 
-```vWidthRangeEnd```	height up to which the maximum width of the vehicle occurs
+```vWidthRangeEnd```	height up to which the maximum width of the vehicle occurs [in millimeters]
 
-```vHeight```	vehicle height
+```vHeight```	vehicle height [in millimeters]
 
-```vMlc```	MLC class value of the vehicle
+```vMlc```	MLC class value of the vehicle [MLC class]
 
-```vClerance```	ground clearance
+```vClerance```	ground clearance [in millimeters]
 
-```vFirstAxlee```	distance between the front bumper and the first axle located behind the geometric centre of the vehicle in a rigid lorry (if the vehicle has more than 2 axles) or the front of the semi-trailer and its first axle
+```vFirstAxle```	distance between the front bumper and the first axle located behind the geometric centre of the vehicle in a rigid lorry (if the vehicle has more than 2 axles) or the front of the semi-trailer and its first axle [in millimeters]
 
-```vLastAxle```	distance between the front bumper and the last axle on a rigid lorry or the front of the semi-trailer and its last axle
+```vLastAxle```	distance between the front bumper and the last axle on a rigid lorry or the front of the semi-trailer and its last axle [in millimeters]
 
-```vTireWidth```	tire width
+```vTireWidth```	tire width [in millimeters]
 
-```vSpacing```	wheelbase of a vehicle
+```vSpacing```	wheelbase of a vehicle [in millimeters]
 
-```vAngle```	maximum steering angle of the last axle of the vehicle
+```vAngle```	maximum steering angle of the last axle of the vehicle [in degrees]
 
-```vLoad```	the highest value of the axle load
+```vLoad```	the highest value of the axle load [in kilonewtons]
 
-```vBolt```	distance between the front bumper and the first axle in a rigid lorry, or the distance between the front of the semi-trailer and the fifth wheel
+```vBolt```	distance between the front bumper and the first axle in a rigid lorry, or the distance between the front of the semi-trailer and the fifth wheel [in millimeters]
 
-```vHazardous```	presence of dangerous goods
+```vHazardous```	presence of dangerous goods [True/False]
 
-```vValue```	cargo value
+### Related to operator preferences and information collected
 
-```vDrivers```	number of drivers in the crew
+```vValue```	cargo value [in dollars]
 
-```singleDriveTime```	maximum single driving time
+```vDrivers```	number of drivers in the crew 
 
-```dailyDriveTime```	maximum daily driving time
+```singleDriveTime```	maximum single driving time [in minutes]
 
-```weeklyDriveTime```	maximum weekly driving time
+```dailyDriveTime```	maximum daily driving time [in minutes]
+
+```weeklyDriveTime```	maximum weekly driving time [in minutes]
 
 ```start```	id of the defined start node
 
 ```end```	id of the defined end node
 
-```daysToDepart```	number of days until planned departure
+```daysToDepart```	number of days until planned departure [0 - today, 1 - tomorrow, etc.]
 
-```maxCost```	maximum amount declared by the carrier to cover the costs of disassembly/reconstruction of infrastructure elements
+```maxCost```	maximum amount declared by the carrier to cover the costs of disassembly/reconstruction of infrastructure elements [in dollars]
 
-```maxTime```	maximum travel time
+```maxTime```	maximum travel time [in minutes]
 
 # Neo4j Graph Database structure
 ![neo4j_struct](https://github.com/betanddontcare/RouteMighty/assets/31188390/a5318089-d160-468b-9028-088fdedcd3fd)
