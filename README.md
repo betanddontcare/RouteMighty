@@ -212,10 +212,20 @@ For more information please read my paper [Parking Lots Assignment Algorithm for
 <summary>Subnode</summary>
   
 ```subID:``` The id of ```Node``` to which ```Subnode``` refers (eg. 16).
+  
 ```name:``` Subnode name - the same as ```Node``` (eg. "Ostrzykowizna")
 
 </details>
 
 ## Relationships
+
+```STARTS``` – reflects the possibility of moving from a given ```Node``` by ```Road```;
+```ENDS``` - representing the possibility of reaching a ```Node``` by ```Road```;
+```IS_ROUNDABOUT``` – specifying that ```Node``` object type represents a roundabout intersection;
+```EXIT``` – representing the possibility of exiting the roundabout (node type interchange) onto the ```Road```;
+```IS_LOCATED_ON``` – specifying that in the ```Node``` it is possible to reach the parking (```RestPoint```);
+```OBSTRUCTS``` – specifying that the ```Obstacle``` is a restriction on the ```Road```;
+```HAS``` – determining the existence of a constraint of a certain type for an ```Obstacle```;
+```ROAD``` – which is the relational equivalent of the Road in the routes graph. This relation should consist parameter ```subID``` which refers to specific ```Road``` object (eg. 143).
 
 # Validation functions
