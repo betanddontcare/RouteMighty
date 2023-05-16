@@ -198,13 +198,14 @@ For more information please read my paper [Parking Lots Assignment Algorithm for
   
 ```milestone:``` Chainage where the parking occurs (eg. 413.8).
   
+```oversizeWidth:``` The width of the parking area possible to use for abnormal vehicle (eg. 0 - if there is no additional operational space).
   
-  "oversizeWidth": 0,
-  "roadNumber": "S7",
-  "generalSlots": 20,
-  "oversizeLength": 0
-}
-```
+```oversizeLength:``` The length of the parking area possible to use for abnormal vehicle (eg. 0 - if there is no additional operational space).
+  
+```roadNumber:``` The number of road near which the parking occurs (eg. "S7")
+  
+```generalSlots:``` Number of slots dedicated to typical trucks (eg. 20).
+  
 </details>
 <details>
 
