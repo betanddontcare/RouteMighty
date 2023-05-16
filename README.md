@@ -149,21 +149,28 @@ In this version the bend is described as an arc of a perfect circle.
 <summary>ElevationObstruction</summary>
   
 ```verticalCurveRadius:``` Vertical radius (in millimeters) of the curve (eg. 200000). In this version the curve is described as an arc of a perfect circle.
+  
 ```removalCost:``` Cost of removing/rebuiling the object (eg. 50000).
 
 </details>
 <details>
 
 <summary>Roundabout</summary>
+
+In this version the roundabout is described as a perfect circle.
   
-```outerRadius:``` 21000,
-  "verticalIsland": 8000,
-  "outerLimit": 0,
-  "innerDiameter": 11000,
-  "open": false,
-  "removalCost": 5000000
-}
-```
+```outerRadius:``` Outer radius (in millimeters) of the roundabout (eg. 20000).
+  
+```innerRadius:``` Inner radius (in millimeters) of the roundabout (eg. 11000).
+  
+```verticalIsland:``` The radius of the central island inside the roundabout (eg. 8000).
+  
+```outerLimit:```  The radius of the obstacle outside the rounadabout (eg. 22000 - if the object is located 2000 mm beyond the outer curb of the roundabout).
+  
+```open:``` Boolean. Is it possible to drive straight through the roundabout : True/False.
+  
+```removalCost:``` Cost of removing/rebuiling the object (eg. 50000).
+
 </details>
 <details>
 
