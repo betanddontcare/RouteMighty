@@ -26,49 +26,46 @@ In order to successfully run the tool you need to:
 
 <summary>Node</summary>
 
-```name:``` Node name (eg. "5th Street/6th Street corner")
+```name:``` Node name (eg. "5th Street/6th Street corner").
   
-```latitude:``` Latitude coords (eg. 52.737228)
+```latitude:``` Latitude coords (eg. 52.737228).
   
-```longitude:``` Longitude coords (eg. 19.995445)
+```longitude:``` Longitude coords (eg. 19.995445).
 </details>
 <details>
 
 <summary>Road</summary>
   
-```lat1:``` Latitude of starting node (eg. 52.149095)
+```lat1:``` Latitude of starting node (eg. 52.149095).
   
-```lat2:``` Latitude of ending node (eg. 52.219148)
+```lat2:``` Latitude of ending node (eg. 52.219148).
   
-```midLatitude:``` Latitude of the point located halfway between starting and ending nodes (eg. 52.18413180707769)
+```midLatitude:``` Latitude of the point located halfway between starting and ending nodes (eg. 52.18413180707769).
   
-```lon1:``` Longitude of starting node (eg. 20.105352)
+```lon1:``` Longitude of starting node (eg. 20.105352).
   
-```lon2":``` Longitude of ending node (eg. 20.204114)
+```lon2":``` Longitude of ending node (eg. 20.204114).
   
-```midLongitude:```  Longitude of the point located halfway between starting and ending nodes (eg. 20.15469410414446)
+```midLongitude:```  Longitude of the point located halfway between starting and ending nodes (eg. 20.15469410414446).
   
-```maxAxleLoad:``` Maximum axle load (in tonnes) acceptable on the road (eg. 115.0)
+```maxAxleLoad:``` Maximum axle load (in tonnes) acceptable on the road (eg. 115.0).
   
-```numbers:``` List of road numbers (eg. ["92", "82"])
+```numbers:``` List of road numbers (eg. ["92", "82"]).
   
-```trafficFactor:``` Traffic factor reflects how much longer or shorter the time required to cover the distance between the nodes `v` and `v'` is in relation to the historical average travel time (eg. 1.0262). This data is relisable by Distance Matrix API service provided by Google Maps.
+```trafficFactor:``` Traffic factor reflects how much longer or shorter the time required to cover the distance between the nodes $v$ and $v'$ is in relation to the historical average travel time (eg. 1.0262). This data is relisable by Distance Matrix API service provided by Google Maps.
   
-```type:```  Type of the road to calculate average speed: A - highway; S - expressway; GP fast traffic trunk road; G main road. (eg. "GP")
+```type:```  Type of the road to calculate average speed: A - highway; S - expressway; GP fast traffic trunk road; G main road.
   
-  "midLatitude": 52.18413180707769,
-  "lon1": 20.105352,
-  "lon2": 20.204114,
-  "kmRange": [
-    410.068,
-    420.628
-  ],
-  "width": 7000,
-  "name": "Gr. Woj. - Sochaczew",
-  "lines": 1,
-  "direction": "TWO_WAY"
-}
-```
+```kmRange:``` Boundary chainage of the road (eg. [410.068, 420.628].
+  
+```width:``` Width (in milimeters) of the road (eg. 7000).
+
+```name:``` Name of the road (eg. "Gr. Woj. - Sochaczew").
+  
+```lines:``` Number of lines in single direction on the road (eg. 1).
+
+```direction:``` Possible direction of travel: "TWO_WAY", "ONE_WAY".
+
 </details>
 <details>
 
