@@ -43,7 +43,9 @@ Sign-up on [OpenWeather](https://openweathermap.org/) webservice and generate yo
 
 Configure the ```server.py``` file and host a Flask microservice. 
 
-## Step 7: Send a ```POST``` query to the Flask. The request should be a JSON object consists of a following keys with parameters:
+## Step 7: 
+
+Send a ```POST``` query to the Flask. The request should be a JSON object consists of a following keys with parameters:
 
 ### Related to vehicle
 
@@ -107,6 +109,26 @@ Configure the ```server.py``` file and host a Flask microservice.
 Example of correct JSON object needed to request:
 
 ```{'vLength' : 10000, 'vWidth' : 3000, 'vWidthTop' : 3000, 'vWidthRangeStart' : 0, 'vWidthRangeEnd' : 4000, 'vHeight' : 4000, 'vMlc' : 100, 'vClerance' : 500, 'vFirstAxle' : 15000, 'vLastAxle' : 23000, 'vTireWidth' : 300, 'vSpacing' : 2700, 'vAngle' : 45, 'vLoad' : 115, 'vBolt' : 5000, 'vHazardous' : False, 'vValue' : 40000, 'vDrivers' : 1, 'singleDriveTime' : 300, 'dailyDriveTime' : 500, 'weeklyDriveTime' : 3000, 'start' : 749, 'end' : 97, 'daysToDepart' : 3, 'maxCost' : 100000, 'maxTime' : 1000}```
+
+## Step 8:
+
+Use data from the response. 
+
+The responded JSON object contains:
+
+1. List of routes with parameters
+
+Every route contains:
+
+1. List of roads consisting of every route. There is an example of single element of this list:
+
+```{'identity': 684, 'name': 'Dębe Wielkie - Mińsk Mazowiecki', 'type': 'GP', 'kmRange': [512.481, 515.2], 'length': 2.719, 'number': ['92'], 'trafficFactor': 1.0487, 'lat1': 52.200531, 'lon1': 21.491036, 'lat2': 52.19092, 'lon2': 21.5274, 'midLatitude': 52.195727, 'midLongitude': 21.50922, 'startPointID': 96, 'endPointID': 97}```
+
+2. Additional parameters useful for assessment and for planning process improvement:
+
+ ```length:``` Total length (in kilometers) of the route (eg. 83.917).
+ ```trafficFactor:``` Traffic factor reflects how much longer or shorter the time required to cover the distance between the nodes $v$ and $v'$ is in relation to the historical average travel time (eg. 1.0262)Traffic parameter 1.016, 'timeTravel': 64, 'restpoints': ['Shorter'], 'impassableObjects': [{'identity': 1122, 'name': 'Oznakowanie pionowe', 'milestone': 209.8, 'number': ['50'], 'latitude': 52.150281, 'longitude': 21.504701}], 'impassableRoundabouts': [], 'cost': 200, 'weather': [], 'weatherIndex': 0.2626, 'safetyIndex': 0.2668}
+
 
 # Neo4j Graph Database structure
 ![neo4j_struct](https://github.com/betanddontcare/RouteMighty/assets/31188390/a5318089-d160-468b-9028-088fdedcd3fd)
