@@ -53,6 +53,7 @@ Step 7: Send a ```POST``` query to the Flask. The request should be a JSON objec
 ```last_axle```	distance between the front bumper and the last axle on a rigid lorry or the front of the semi-trailer and its last axle
 
 ```width_tire```	tire width
+
 ```spacing```	wheelbase of a vehicle
 
 ```angle```	maximum steering angle of the last axle of the vehicle
