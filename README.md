@@ -2,6 +2,7 @@
 
 # RouteMighty 1.2.0
 RouteMighty is a software application engine developed in Python for the efficient planning of routes for abnormal vehicles, such as those that are overweight or oversized.
+This software based on a novel method developed in my PhD disseration titled: [Computer-aided method of transport planning process for abnormal vehicles](https://www.researchgate.net/publication/352283436_Metoda_komputerowego_wspomagania_procesu_planowania_przemieszczania_pojazdow_nienormatywnych)
 
 ![rm_arch](https://github.com/betanddontcare/RouteMighty/assets/31188390/5681e7e6-bbae-4432-a9f6-f9c5d188dc79)
 
