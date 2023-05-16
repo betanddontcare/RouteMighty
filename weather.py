@@ -1,7 +1,7 @@
 import requests, json
 
 def request_16_day_forecast(latitude, longitude, day_to_depart):
-    url = "https://api.openweathermap.org/data/2.5/forecast/daily?lat=" + str(latitude) + "&lon=" + str(longitude) + "&cnt=" + str(day_to_depart + 1) + "&appid=" + "e0dee9e38d26ece7011a1b86282f7e3f"
+    url = "https://api.openweathermap.org/data/2.5/forecast/daily?lat=" + str(latitude) + "&lon=" + str(longitude) + "&cnt=" + str(day_to_depart + 1) + "&appid=" + #YOUR OPEN WEATHER API KEY
     response = requests.get(url)
     return json.loads(response.text)
 
