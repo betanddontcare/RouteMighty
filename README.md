@@ -303,8 +303,6 @@ In this version the roundabout is described as a perfect circle.
 <details>
 
 <summary>RestPoint</summary>
-
-For more information please read my paper [Parking Lots Assignment Algorithm for Vehicles Requiring Specific Parking Conditions in Vehicle Routing Problem](https://ieeexplore.ieee.org/document/9628073)
   
 ```slotLength:``` Length (in millimeters) of single slot for truck (eg. 20000).
   
@@ -333,6 +331,8 @@ For more information please read my paper [Parking Lots Assignment Algorithm for
 ```roadNumber:``` The number of road near which the parking occurs (eg. "S7")
   
 ```generalSlots:``` Number of slots dedicated to typical trucks (eg. 20).
+ 
+ For more information please read my paper [Parking Lots Assignment Algorithm for Vehicles Requiring Specific Parking Conditions in Vehicle Routing Problem](https://ieeexplore.ieee.org/document/9628073)
   
 </details>
 <details>
