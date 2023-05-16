@@ -26,13 +26,11 @@ In order to successfully run the tool you need to:
 
 <summary>Node</summary>
 
-```
-{
-  "name": "Drobin",
-  "latitude": 52.737228,
-  "longitude": 19.995445
-}
-```
+```name:``` Node name (eg. "5th Street/6th Street corner")
+  
+```latitude:``` Latitude coords (eg. 52.737228)
+  
+```longitude:``` Longitude coords (eg. 19.995445)
 </details>
 <details>
 
