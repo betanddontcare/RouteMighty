@@ -505,7 +505,7 @@ then it moves maximally close to the limiting object,
 limits > \frac{width}{2}
 ```
 
-then it moves maximally close to the edge of the roadway lying on the opposite side of the limiting object whose distance from the center of the roadway is ```limits```.
+then it moves maximally close to the edge of the roadway lying on the opposite side of the limiting object whose distance from the center of the roadway is ```min(limits)```.
 
 The variant in which there is no symmetry and where on both sides above the road surface there are objects limiting the extreme horizontal has been omitted in the work.
 in the case of both symmetry and lack of symmetry of the structure, the horizontal clearance may be limited from the ground level (outside the road outline) and at a certain height (above the road surface).
@@ -563,7 +563,7 @@ then the restriction occurs on both sides of the road from the ground level. The
 \frac{vWidth}{2} + \frac{vSpacing}{2} + vTireWidth < \frac{3width}{2}
 ```
 
-In addition, the condition of no contact with the limiting object whose distance from the center of the roadway is ```limits``` must also be met:
+In addition, the condition of no contact with the limiting object whose distance from the center of the roadway is ```min(limits)``` must also be met:
 
 ```math
 vWidth - width < min(limits)
@@ -571,3 +571,16 @@ vWidth - width < min(limits)
 
 ## Elevation validation
 ![elevat](https://github.com/betanddontcare/RouteMighty/assets/31188390/8336deda-78ac-466c-809e-13932b1a31a8)
+
+
+The constraint of the object may also be related to the occurrence of a vertical arc. The possibility of passing through such an object has been defined for the following assumptions:
+
+• when driving through a vertical curve, all wheels of the vehicle touch the ground,
+
+• the vertical curve profile is part of a circle.
+
+In the example of the figure above, in the case of a vertical curve, the following condition must be met:
+
+```math
+vClerance > \frac{(vFirstAxle - vBolt)^2}{2verticalCurveRadius}
+```
