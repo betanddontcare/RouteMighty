@@ -487,5 +487,53 @@ and the condition described by second formula from point 2.
 ## Width validation
 ![wth_merg](https://github.com/betanddontcare/RouteMighty/assets/31188390/9bd9f9ef-5575-4306-b4e1-7a11a49571ba)
 
+The travel restriction may also be related to the width of the vehicle. The possibility of driving through the structure limiting the horizontal clearance was considered according to the following assumptions:
+1. the maximum width of the vehicle and the maximum limitation of the horizontal clearance occur only in one height range;
+2. when passing through an object limiting the horizontal clearance, the vehicle moves in the center of the road axis - in the case of symmetry of the object, and otherwise:
+   
+• if 
+
+```math
+limits < \frac{width}{2}
+```
+
+then it moves maximally close to the limiting object,
+
+• if 
+
+```math
+limits > \frac{width}{2}
+```
+
+then it moves maximally close to the edge of the roadway lying on the opposite side of the limiting object whose distance from the center of the roadway is ```limits```.
+
+The variant in which there is no symmetry and where on both sides above the road surface there are objects limiting the extreme horizontal has been omitted in the work.
+in the case of both symmetry and lack of symmetry of the structure, the horizontal clearance may be limited from the ground level (outside the road outline) and at a certain height (above the road surface).
+
+Analyzing Figure, four situations can be distinguished:
+1. when ```symmetric = 1``` and
+
+```math
+limits > \frac{width}{2}
+```
+
+this limitation occurs from the ground level outside the road outline, where the passage condition is specified in following way:
+
+```math
+vWidth < 2limits
+```
+
+2. when 〖ws〗_m (v,v')=1 and w_m (v,v')<(w(v,v^'))/2 the restriction is over the road. If w_m (v,v')<(wt(st))/2, then in such a situation it should be checked whether for the height range at which the maximum width of the vehicle occurs there will be contact with the object:
+max⁡(0,(min⁡(b_hr,b_wr )-max(a_hr,a_wr ))=0
+(5.13)
+Otherwise, the vehicle can pass unrestricted.
+5. when 〖ws〗_m (v,v')=0 and w_m (v,v')<(w(v,v^'))/2 then the restriction is above the road surface on one side. The vehicle can pass through the facility unhindered if the following condition is met:
+wt(st)/2-w_m (v,v')+(dt(st))/2+ut(st)<(w(v,v^'))/2 (5.14)
+Otherwise, check condition 5.13.
+6. when 〖ws〗_m (v,v')=0 and w_m (v,v')>(w(v,v^'))/2 then the restriction occurs on both sides of the road from the ground level. The condition of keeping the vehicle wheels in the road zone is presented below:
+wt(st)/2+(dt(st))/2+ut(st)<(3w(v,v^'))/2 (5.15)
+In addition, the condition of no contact with the limiting object whose distance from the center of the roadway is w_m (v,v') must also be met:
+wt(st)-w(v,v')<w_m (v,v') (5.16)
+
 ## Elevation validation
 ![elevat](https://github.com/betanddontcare/RouteMighty/assets/31188390/8336deda-78ac-466c-809e-13932b1a31a8)
