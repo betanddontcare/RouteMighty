@@ -1,4 +1,4 @@
-![rm](https://github.com/betanddontcare/RouteMighty/assets/31188390/af0f6a33-c0a6-4066-9ac9-3eda41aed941)
+![rm](https://github.com/betanddontcare/RouteMighty/assets/31188390/691ac948-e4a2-462f-92d7-9b659150a42a)
 
 # RouteMighty 1.2.0
 RouteMighty is a software application engine developed in Python for the efficient planning of routes for abnormal vehicles, such as those that are overweight or oversized.
@@ -431,7 +431,7 @@ boundaryRadius < \sqrt{(outerRadius - vTireWidth - \frac{vSpacing}{2})^2 - (\fra
 4. ```outerLimit > 0``` and ```boundaryRadius > 0``` - in this situation, point A (rear right corner of the semi-trailer/vehicle) moves with maximum proximity to the limiting object lying on a circle with radius ```outerLimit``` and for this condition the turning angle is checked - the condition is analogous to the condition described in formula from point 1. In addition, for such a scenario, it should be checked whether point B will not be within the zone defined by the radius ```boundaryRadius```:
 
 ```math
-vWidth + boundaryRadius < \sqrt{outerLimit^2 - (vLength - vLastAxle + \sqrt{vLastAxle - vBolt}{2})^2}
+vWidth + boundaryRadius < \sqrt{outerLimit^2 - (vLength - vLastAxle + \frac{vLastAxle - vBolt}{2})^2}
 ```
 
 and the condition described by second formula from point 2.
@@ -442,3 +442,5 @@ and the condition described by second formula from point 2.
 ## Width validation
 ![wth_merg](https://github.com/betanddontcare/RouteMighty/assets/31188390/9bd9f9ef-5575-4306-b4e1-7a11a49571ba)
 
+## Elevation validation
+![elevat](https://github.com/betanddontcare/RouteMighty/assets/31188390/8336deda-78ac-466c-809e-13932b1a31a8)
