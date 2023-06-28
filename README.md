@@ -439,6 +439,51 @@ and the condition described by second formula from point 2.
 ## Roundabout validation
 ![ra](https://github.com/betanddontcare/RouteMighty/assets/31188390/47b149c6-deb1-4f58-b204-d49e51fef6e7)
 
+The analysis of the possibility of driving through the roundabout will be based on the following assumptions:
+• the sum of the distance from the last axle to the fifth wheel, the distance between the inner edges of the wheels on a single axle and twice the tire width does not exceed the outer diameter of the roundabout;
+
+• if an external limiting object exists, then its radius is greater than the distance between the apparent non-steering axle and the rear edge of the vehicle/semi-trailer;
+
+• if there is a limiting object on the roundabout, then regardless of the chosen direction of travel (turn right, drive straight ahead, etc.) and the actual location of this object, it is assumed that it will be at the height of the maneuvering vehicle (it will make contact or the vehicle will move at a safe distance from this object);
+
+• the limiting object always has a height resulting in potential contact with the maneuvering vehicle;
+
+• limiting objects located near the roundabout do not hinder both entry and exit to/from the roundabout.
+
+The developed model distinguishes 5 possible scenarios for which the fulfillment of particular conditions will affect the cost of driving through the roundabout. These scenarios occur when:
+1. ```outerLimit = 0``` and ```verticalIsland = 0``` - in this situation, the vehicle moves in such a way that the right wheel of the last axle of the semi-trailer/vehicle moves as close as possible to the outer edge of the roundabout in order to minimize the steering angle of this axis:
+
+```math
+vAngle \geq 90^{\circ} - cos^{-1} (\frac{\frac{vLastAxle - vBolt}{2}}{outerRadius - vTireWidth - \frac{vSpacing}{2}})
+```
+
+2. ```outerLimit > 0``` and ```verticalIsland = 0``` – in this situation, point A (rear right corner of the semi-trailer/vehicle) moves with maximum proximity to the limiting object lying on a circle with radius ```outerLimit``` and for this condition the turning angle, which must be smaller than the turning angle of the last axle declared by the manufacturer:
+
+ ```math
+vAngle \geq tan^{-1} (\frac{\frac{vLastAxle - vBolt}{2}}{\sqrt{outerLimit^2 - (vLength - vLastAxle + \frac{vLastAxle - vBolt}{2})^2 - \frac{vWidth}{2}}})
+```
+
+In addition, the distance of the left wheel of the axle lying directly behind the apparent non-steering axle of the semi-trailer/vehicle from the inner curb of the roundabout is checked:
+
+```math
+innerRadius + vTireWidth + \frac{vSpacing}{2} < \sqrt{(\sqrt{outerLimit^2 - (vLength - vLastAxle + \frac{vLastAxle - vBolt}{2})^2} - \frac{vWidth}{2})^2 + (vFirstAxle - vBolt - \frac{vLastAxle - vBolt}{2})^2}
+```
+
+3. ```outerLimit = 0``` and ```verticalIsland > 0``` - in this situation, the vehicle moves in such a way that the right wheel of the last axle of the semi-trailer/vehicle moves as close as possible to the outer edge of the roundabout in order to minimize the turning angle of this axis and this is a condition analogous to the condition described by formula from point 1. What's more, point B (the point of closest approach to the center of the roundabout/horizontal curve) cannot exceed the border determined by the radius ```verticalIsland```:
+
+```math
+verticalIsland < \sqrt{(outerRadius - vTireWidth - \frac{vSpacing}{2})^2 - (\frac{vLastAxle - vBolt}{2})^2} - \frac{vWidth}{2}
+```
+
+4. ```outerLimit > 0``` and ```verticalIsland > 0``` – in this situation, point A (rear right corner of the semi-trailer/vehicle) moves with maximum proximity to the limiting object lying on a circle with radius ```outerLimit``` and for this condition the turning angle - a condition analogous to the condition described in formula from point 1. In addition, for such a scenario, it should be checked whether point B will not be within the zone defined by the radius ```verticalisland```:
+
+```math
+vWidth + verticalIsland < \sqrt{outerLimit^2 - (vLength - vLastAxle + \frac{vLastAxle - vBolt}{2})^2}
+```
+
+and the condition described by second formula from point 2.
+5. ```open = 1``` - in this situation, due to the properties of the roundabout, it is possible to drive straight ahead or in any other direction without having to check other conditions.
+
 ## Width validation
 ![wth_merg](https://github.com/betanddontcare/RouteMighty/assets/31188390/9bd9f9ef-5575-4306-b4e1-7a11a49571ba)
 
