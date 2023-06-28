@@ -364,4 +364,81 @@ In this version the roundabout is described as a perfect circle.
 ```ROAD``` – which is the relational equivalent of the Road in the routes graph. This relation should consist parameter ```subID``` which refers to specific ```Road``` object (eg. 143).
 
 # Validation functions explanation
-## TBA
+## Height validation
+![height_gh](https://github.com/betanddontcare/RouteMighty/assets/31188390/dbd91fb5-a4c0-4f24-bc40-3632cd13564f)
+
+The necessity to remove the restriction may result from the height of the obstacle, and the analysis of the possibility of driving under it was carried out according to the following assumptions:
+
+• the profile is a straight line parallel to the plane of the road or is inclined at the angle ```range```;
+
+• when driving under the object, no part of the vehicle located at the ```vHeight``` may protrude beyond the outline of the road.
+
+For the situation presented in Figure, three conditions of passage were distinguished:
+1. when ```range = 0``` - the height of the vehicle ```vHeight``` must be less than the ```limit```:
+```math
+vHeight < limit
+```
+2. when ```range > 0``` and
+```math
+limit - vHeight > tan(range) * width
+```
+then the vehicle can take either side of the road,
+
+3. when ```range > 0``` and 
+```math
+limit - vHeight < tan(range) * width
+```
+then the vehicle can pass under the object with as long as the condition is met:
+```math
+vWidthTop < \frac{limit - vHeight}{tan(range)}
+```
+
+## Curve validation
+![curvegit](https://github.com/betanddontcare/RouteMighty/assets/31188390/f491a21f-c5eb-4cf1-b871-e977cb3f4c3a)
+
+The presence of the limiting object may generate the need to drive through a horizontal curve (bend). For such a variant it was assumed that:
+
+• the inside and outside profile of the bend is part of a circle;
+
+• the sum of the distance from the last axle to the fifth wheel, the distance between the inner edges of the wheels on a single axle and twice the tire width does not exceed twice the outer radius of the turn;
+
+• the limiting object always has a height resulting in potential contact with the maneuvering vehicle.
+
+Analyzing Figure, 4 possible scenarios can be distinguished, occurring when:
+1. ```outerLimit = 0``` and ```boundaryRadius = 0``` - in this situation the vehicle moves in such a way that the right wheel of the last axle of the semi-trailer/vehicle moves as close as possible to the outer edge of the turn in order to minimize the turning angle this axis:
+```math
+vAngle \geq 90^{\circ} - cos^{-1} (\frac{\frac{vLastAxle - vBolt}{2}}{outerRadius - vTireWidth - \frac{vSpacing}{2}})
+```
+
+2. ```outerLimit > 0``` and ```boundaryRadius = 0``` - in this situation, point A (rear right corner of the semi-trailer/vehicle) moves with maximum proximity to the limiting object lying on a circle with radius ```outerLimit``` and for this condition the steering angle is checked, which must be smaller than the last axle's declared by the manufacturer:
+
+ ```math
+vAngle \geq tan^{-1} (\frac{\frac{vLastAxle - vBolt}{2}}{\sqrt{outerLimit^2 - (vLength - vLastAxle + \frac{vLastAxle - vBolt}{2})^2 - \frac{vWidth}{2}}})
+```
+
+In addition, the distance of the left wheel of the axle lying directly behind the apparent non-steering axle of the semi-trailer/vehicle from the inner curb of the turn is checked:
+
+```math
+innerRadius + vTireWidth + \frac{vSpacing}{2} < \sqrt{(\sqrt{outerLimit^2 - (vLength - vLastAxle + \frac{vLastAxle - vBolt}{2})^2} - \frac{vWidth}{2})^2 + (vFirstAxle - vBolt - \frac{vLastAxle - vBolt}{2})^2}
+```
+
+3. ```outerLimit = 0``` and ```boundaryRadius > 0``` - in this situation the vehicle moves in such a way that the right wheel of the last axle of the semi-trailer/vehicle moves as close as possible to the outer edge of the turn in order to minimize the turning angle this axis and it is a condition analogous to the condition described by formula from point 1. Moreover, point B (the point of closest approach to the center of the turn) cannot exceed the limit determined by the radius ```boundaryRadius```:
+
+```math
+boundaryRadius < \sqrt{(outerRadius - vTireWidth - \frac{vSpacing}{2})^2 - (\frac{vLastAxle - vBolt}{2})^2} - \frac{vWidth}{2}
+```
+
+4. ```outerLimit > 0``` and ```boundaryRadius > 0``` - in this situation, point A (rear right corner of the semi-trailer/vehicle) moves with maximum proximity to the limiting object lying on a circle with radius ```outerLimit``` and for this condition the turning angle is checked - the condition is analogous to the condition described in formula from point 1. In addition, for such a scenario, it should be checked whether point B will not be within the zone defined by the radius ```boundaryRadius```:
+
+```math
+vWidth + boundaryRadius < \sqrt{outerLimit^2 - (vLength - vLastAxle + \sqrt{vLastAxle - vBolt}{2})^2}
+```
+
+and the condition described by second formula from point 2.
+
+## Roundabout validation
+![ra](https://github.com/betanddontcare/RouteMighty/assets/31188390/47b149c6-deb1-4f58-b204-d49e51fef6e7)
+
+## Width validation
+![wth_merg](https://github.com/betanddontcare/RouteMighty/assets/31188390/9bd9f9ef-5575-4306-b4e1-7a11a49571ba)
+
