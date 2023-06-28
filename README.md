@@ -514,26 +514,60 @@ Analyzing Figure, four situations can be distinguished:
 1. when ```symmetric = 1``` and
 
 ```math
-limits > \frac{width}{2}
+min(limits) > \frac{width}{2}
 ```
 
 this limitation occurs from the ground level outside the road outline, where the passage condition is specified in following way:
 
 ```math
-vWidth < 2limits
+vWidth < 2min(limits)
 ```
 
-2. when 〖ws〗_m (v,v')=1 and w_m (v,v')<(w(v,v^'))/2 the restriction is over the road. If w_m (v,v')<(wt(st))/2, then in such a situation it should be checked whether for the height range at which the maximum width of the vehicle occurs there will be contact with the object:
-max⁡(0,(min⁡(b_hr,b_wr )-max(a_hr,a_wr ))=0
-(5.13)
-Otherwise, the vehicle can pass unrestricted.
-5. when 〖ws〗_m (v,v')=0 and w_m (v,v')<(w(v,v^'))/2 then the restriction is above the road surface on one side. The vehicle can pass through the facility unhindered if the following condition is met:
-wt(st)/2-w_m (v,v')+(dt(st))/2+ut(st)<(w(v,v^'))/2 (5.14)
-Otherwise, check condition 5.13.
-6. when 〖ws〗_m (v,v')=0 and w_m (v,v')>(w(v,v^'))/2 then the restriction occurs on both sides of the road from the ground level. The condition of keeping the vehicle wheels in the road zone is presented below:
-wt(st)/2+(dt(st))/2+ut(st)<(3w(v,v^'))/2 (5.15)
-In addition, the condition of no contact with the limiting object whose distance from the center of the roadway is w_m (v,v') must also be met:
-wt(st)-w(v,v')<w_m (v,v') (5.16)
+2. when ```symmetric = 1``` and
+
+```math
+min(limits) < \frac{width}{2}
+```
+
+the restriction is over the road. If 
+
+```math
+min(limits) < \frac{width}{2}
+```
+
+then in such a situation it should be checked whether for the height range at which the maximum width of the vehicle occurs there will be contact with the object. Otherwise, the vehicle can pass unrestricted.
+
+3. when ```symmetric = 0``` and
+
+```math
+min(limits) < \frac{width}{2}
+```
+
+then the restriction is above the road surface on one side. The vehicle can pass through the facility unhindered if the following condition is met:
+
+```math
+\frac{vWidth}{2} - min(limits) + \frac{vSpacing}{2} + vTireWidth < \frac{width}{2}
+```
+
+Otherwise, check condition from point 2.
+
+4. when ```symmetric = 0``` and
+
+```math
+min(limits) > \frac{width}{2}
+```
+
+then the restriction occurs on both sides of the road from the ground level. The condition of keeping the vehicle wheels in the road zone is presented below:
+
+```math
+\frac{vWidth}{2} + \frac{vSpacing}{2} + vTireWidth < \frac{3width}{2}
+```
+
+In addition, the condition of no contact with the limiting object whose distance from the center of the roadway is ```limits``` must also be met:
+
+```math
+vWidth - width < min(limits)
+```
 
 ## Elevation validation
 ![elevat](https://github.com/betanddontcare/RouteMighty/assets/31188390/8336deda-78ac-466c-809e-13932b1a31a8)
